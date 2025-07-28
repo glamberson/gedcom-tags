@@ -1,0 +1,149 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG en-US
+1 SCHMA
+2 TAG _TAG https://gedcom.io/terms/v7/_TAG
+1 SOUR GRAMPS
+2 VERS 6.0.0
+2 NAME GRAMPS
+2 CORP GRAMPS Development Team
+1 NOTE This example shows GRAMPS-style hierarchical tags
+
+0 @T1@ _TAG
+1 NAME Research
+1 _COLOR #FF0000
+1 _ATTR description
+2 _VALUE Research status tracking
+
+0 @T2@ _TAG
+1 NAME ToDo
+1 _COLOR #FFA500
+1 _ATTR parent_tag
+2 _VALUE @T1@
+1 _ATTR priority
+2 _VALUE 3
+
+0 @T3@ _TAG
+1 NAME InProgress
+1 _COLOR #FFFF00
+1 _ATTR parent_tag
+2 _VALUE @T1@
+1 _ATTR priority
+2 _VALUE 2
+
+0 @T4@ _TAG
+1 NAME Complete
+1 _COLOR #00FF00
+1 _ATTR parent_tag
+2 _VALUE @T1@
+1 _ATTR priority
+2 _VALUE 1
+
+0 @T5@ _TAG
+1 NAME DNA
+1 _COLOR #00FFFF
+1 _ATTR description
+2 _VALUE DNA research categories
+
+0 @T6@ _TAG
+1 NAME Y-DNA
+1 _COLOR #0080FF
+1 _ATTR parent_tag
+2 _VALUE @T5@
+1 _ATTR test_type
+2 _VALUE Y-111
+
+0 @T7@ _TAG
+1 NAME mtDNA
+1 _COLOR #FF00FF
+1 _ATTR parent_tag
+2 _VALUE @T5@
+1 _ATTR test_type
+2 _VALUE Full Sequence
+
+0 @T8@ _TAG
+1 NAME Autosomal
+1 _COLOR #8000FF
+1 _ATTR parent_tag
+2 _VALUE @T5@
+1 _ATTR test_type
+2 _VALUE AncestryDNA
+
+0 @I1@ INDI
+1 NAME Elizabeth /Anderson/
+2 GIVN Elizabeth
+2 SURN Anderson
+1 SEX F
+1 BIRT
+2 DATE 23 MAY 1795
+2 PLAC Edinburgh, Scotland
+1 _TAG @T2@
+2 DATE 15 JAN 2025
+2 NOTE Need to search Scottish parish records
+1 _TAG @T7@
+2 NOTE Haplogroup H1a1
+
+0 @I2@ INDI
+1 NAME Robert /Anderson/
+2 GIVN Robert
+2 SURN Anderson
+1 SEX M
+1 BIRT
+2 DATE 12 AUG 1820
+2 PLAC Edinburgh, Scotland
+1 DEAT
+2 DATE 5 JUL 1888
+2 PLAC Toronto, Ontario, Canada
+1 _TAG @T3@
+2 DATE 20 JAN 2025
+2 NOTE Currently researching immigration records
+1 _TAG @T6@
+2 NOTE R-M269, matches 5 other Andersons
+
+0 @I3@ INDI
+1 NAME Margaret /Wilson/
+2 GIVN Margaret
+2 SURN Wilson
+1 SEX F
+1 BIRT
+2 DATE 30 NOV 1825
+2 PLAC Glasgow, Scotland
+1 _TAG @T4@
+2 DATE 10 DEC 2024
+2 NOTE All Scottish records found and verified
+1 _TAG @T8@
+2 NOTE Multiple 3rd-4th cousin matches confirmed
+
+0 @F1@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 MARR
+2 DATE 14 FEB 1848
+2 PLAC Toronto, Ontario, Canada
+1 _TAG @T4@
+2 NOTE Marriage record found at Archives of Ontario
+
+0 @E1@ EVEN
+1 TYPE Immigration
+1 DATE 15 MAY 1847
+1 PLAC Quebec City, Quebec, Canada
+1 NOTE Ship: Jane Black from Glasgow
+1 _TAG @T3@
+1 _TAG @T6@
+2 NOTE Checking ship manifest for DNA match surnames
+
+0 @S1@ SOUR
+1 TITL Scotland, Select Births and Baptisms, 1564-1950
+1 PUBL FamilySearch.org
+1 _TAG @T4@
+
+0 @C1@ CITA
+1 SOUR @S1@
+1 PAGE Elizabeth Anderson, 23 May 1795, Edinburgh
+1 _TAG @T2@
+2 NOTE Need to verify with original parish record
+
+0 TRLR

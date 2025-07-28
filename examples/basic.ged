@@ -1,0 +1,64 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG en-US
+1 SCHMA
+2 TAG _TAG https://gedcom.io/terms/v7/_TAG
+1 SOUR ExampleSoftware
+2 VERS 1.0
+2 NAME Example Software
+2 CORP Example Corp
+
+0 @T1@ _TAG
+1 NAME Verified
+1 _COLOR #00FF00
+
+0 @T2@ _TAG
+1 NAME Needs Review
+1 _COLOR #FF0000
+
+0 @T3@ _TAG
+1 NAME Immigration Line
+
+0 @I1@ INDI
+1 NAME John /Smith/
+2 GIVN John
+2 SURN Smith
+1 BIRT
+2 DATE 15 MAR 1850
+2 PLAC Boston, Massachusetts, USA
+1 DEAT
+2 DATE 8 DEC 1920
+2 PLAC Los Angeles, California, USA
+1 _TAG @T1@
+2 DATE 10 JAN 2025
+2 NOTE All vital records verified against original sources
+
+0 @I2@ INDI
+1 NAME Mary /Jones/
+2 GIVN Mary
+2 SURN Jones
+1 BIRT
+2 DATE ABT 1855
+2 PLAC Ireland
+1 _TAG @T2@
+2 NOTE Birth location uncertain, needs Irish records search
+1 _TAG @T3@
+
+0 @S1@ SOUR
+1 TITL 1900 United States Federal Census
+1 _TAG @T1@
+2 DATE 5 JAN 2025
+
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 MARR
+2 DATE 12 JUN 1875
+2 PLAC Boston, Massachusetts, USA
+1 _TAG @T2@
+2 NOTE Marriage certificate not yet located
+
+0 TRLR

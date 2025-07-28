@@ -1,0 +1,142 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG en-US
+1 SCHMA
+2 TAG _TAG https://gedcom.io/terms/v7/_TAG
+1 SOUR GenealogyPro
+2 VERS 5.0
+2 NAME Genealogy Pro
+2 CORP Professional Genealogy Software Inc
+
+0 @T1@ _TAG
+1 NAME DNA Match
+1 _COLOR #00FFFF
+1 _ATTR test_company
+2 _VALUE AncestryDNA
+1 _ATTR confidence
+2 _VALUE high
+
+0 @T2@ _TAG
+1 NAME Brick Wall
+1 _COLOR #8B0000
+1 _ATTR years_researching
+2 _VALUE 10
+1 _ATTR last_checked
+2 _VALUE 2025-01-15
+
+0 @T3@ _TAG
+1 NAME Military Service
+1 _COLOR #4B5320
+1 _ATTR branch
+2 _VALUE Army
+1 _ATTR conflict
+2 _VALUE Civil War
+
+0 @T4@ _TAG
+1 NAME Direct Ancestor
+1 _COLOR #FFD700
+1 _ATTR generation
+2 _VALUE 5
+
+0 @T5@ _TAG
+1 NAME Research Priority
+1 _COLOR #FF00FF
+1 _ATTR priority_level
+2 _VALUE 1
+1 _ATTR assigned_to
+2 _VALUE John Researcher
+1 _ATTR due_date
+2 _VALUE 2025-02-15
+
+0 @I1@ INDI
+1 NAME William /Patterson/
+2 GIVN William
+2 SURN Patterson
+1 SEX M
+1 BIRT
+2 DATE 14 JUL 1823
+2 PLAC County Cork, Ireland
+1 DEAT
+2 DATE 3 MAY 1885
+2 PLAC Chicago, Illinois, USA
+1 _TAG @T2@
+2 DATE 1 JAN 2015
+2 NOTE Cannot find parents or siblings in Irish records
+1 _TAG @T3@
+2 DATE 15 MAR 2020
+2 NOTE Served in 69th New York Infantry
+1 _TAG @T4@
+
+0 @I2@ INDI
+1 NAME Sarah /Mitchell/
+2 GIVN Sarah
+2 SURN Mitchell
+1 SEX F
+1 BIRT
+2 DATE 8 NOV 1825
+2 PLAC Ohio, USA
+1 _TAG @T4@
+1 _TAG @T5@
+2 DATE 28 JAN 2025
+2 NOTE Need to find marriage record
+
+0 @I3@ INDI
+1 NAME James /Patterson/
+2 GIVN James
+2 SURN Patterson
+1 SEX M
+1 BIRT
+2 DATE 22 FEB 1850
+2 PLAC Chicago, Illinois, USA
+1 _TAG @T1@
+2 DATE 12 DEC 2024
+2 NOTE Matches J. Smith - 3rd cousin, 89cM shared
+1 _TAG @T4@
+
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 MARR
+2 DATE ABT 1848
+2 PLAC Ohio, USA
+1 CHIL @I3@
+1 _TAG @T5@
+2 NOTE Marriage location uncertain
+
+0 @S1@ SOUR
+1 TITL Illinois Statewide Death Index, 1916-1950
+1 PUBL Illinois Department of Public Health
+1 _TAG @T1@
+2 NOTE Contains DNA match ancestor
+
+0 @R1@ REPO
+1 NAME National Archives and Records Administration
+1 ADDR
+2 ADR1 700 Pennsylvania Avenue NW
+2 CITY Washington
+2 STAE DC
+2 POST 20408
+2 CTRY USA
+1 _TAG @T3@
+2 NOTE Has Civil War pension files
+
+0 @N1@ NOTE Military service details for William Patterson
+1 CONT 
+1 CONT Enlisted: 15 August 1862
+1 CONT Regiment: 69th New York Infantry (Irish Brigade)
+1 CONT Battles: Antietam, Fredericksburg, Gettysburg
+1 CONT Discharged: 20 June 1865
+1 _TAG @T3@
+
+0 @O1@ OBJE
+1 FILE civil_war_discharge.jpg
+2 FORM JPEG
+1 TITL Discharge Papers - William Patterson
+1 _TAG @T3@
+1 _TAG @T1@
+2 NOTE Confirms military service for DNA match line
+
+0 TRLR
