@@ -1,0 +1,52 @@
+# Invalid TAG Extension Examples
+# DO NOT USE - These show what NOT to do
+
+# INVALID: Missing NAME
+0 @BAD1@ _TAG
+1 _COLOR #FF0000
+
+# INVALID: Wrong color format (3 digits)
+0 @BAD2@ _TAG
+1 NAME Bad Color
+1 _COLOR #FFF
+
+# INVALID: Wrong color format (no hash)
+0 @BAD3@ _TAG  
+1 NAME Bad Color 2
+1 _COLOR FF0000
+
+# INVALID: Wrong color format (8 digits)
+0 @BAD4@ _TAG
+1 NAME Bad Color 3
+1 _COLOR #FF0000FF
+
+# INVALID: Named color not supported
+0 @BAD5@ _TAG
+1 NAME Bad Color 4
+1 _COLOR red
+
+# INVALID: RGB format not supported
+0 @BAD6@ _TAG
+1 NAME Bad Color 5
+1 _COLOR rgb(255,0,0)
+
+# INVALID: Missing _VALUE for _ATTR
+0 @BAD7@ _TAG
+1 NAME Bad Attribute
+1 _ATTR something
+
+# INVALID: _VALUE without _ATTR
+0 @BAD8@ _TAG
+1 NAME Bad Value
+1 _VALUE orphan value
+
+# INVALID: Multiple NAMEs
+0 @BAD9@ _TAG
+1 NAME First Name
+1 NAME Second Name
+
+# INVALID: Multiple _COLORs
+0 @BAD10@ _TAG
+1 NAME Multiple Colors
+1 _COLOR #FF0000
+1 _COLOR #00FF00

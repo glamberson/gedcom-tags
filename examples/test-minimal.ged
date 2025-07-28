@@ -1,0 +1,14 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+1 SCHMA
+2 TAG _TAG https://gedcom.io/terms/v7/_TAG
+
+0 @T1@ _TAG
+1 NAME Test Tag
+
+0 @I1@ INDI
+1 NAME Test /Person/
+1 _TAG @T1@
+
+0 TRLR

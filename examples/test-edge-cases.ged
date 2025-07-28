@@ -1,0 +1,91 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+1 SCHMA
+2 TAG _TAG https://gedcom.io/terms/v7/_TAG
+1 NOTE Test file for edge cases and validation
+
+0 @EDGE1@ _TAG
+1 NAME Tag with Maximum Length Name That Tests The Limits Of What A Tag Name Can Be
+1 _COLOR #FFFFFF
+1 NOTE White color - maximum brightness
+
+0 @EDGE2@ _TAG
+1 NAME Black Tag
+1 _COLOR #000000
+1 NOTE Black color - minimum brightness
+
+0 @EDGE3@ _TAG
+1 NAME Special Characters / (Slash) & More
+1 _COLOR #123ABC
+1 NOTE Mixed case hex color
+
+0 @EDGE4@ _TAG
+1 NAME Unicode Tag 世界
+1 _COLOR #abc123
+1 NOTE Lower case hex color
+
+0 @EDGE5@ _TAG
+1 NAME Many Attributes
+1 _COLOR #FF00FF
+1 _ATTR attr1
+2 _VALUE value1
+1 _ATTR attr2
+2 _VALUE value2
+1 _ATTR attr3
+2 _VALUE value3
+1 _ATTR attr4
+2 _VALUE value4
+1 _ATTR attr5
+2 _VALUE value5
+1 NOTE Tag with many vendor attributes
+
+0 @EDGE6@ _TAG
+1 NAME No Color Tag
+1 NOTE This tag has no color defined
+
+0 @I1@ INDI
+1 NAME Edge Case /Tester/
+1 _TAG @EDGE1@
+1 _TAG @EDGE2@
+1 _TAG @EDGE3@
+1 _TAG @EDGE4@
+1 _TAG @EDGE5@
+1 _TAG @EDGE6@
+2 DATE 1 JAN 2025
+2 NOTE Multiple tags on one person
+
+0 @I2@ INDI
+1 NAME Another /Tester/
+1 _TAG @EDGE1@
+2 DATE 31 DEC 2024
+2 NOTE Same tag used on multiple people
+1 _TAG @EDGE1@
+2 DATE 1 JAN 2025
+2 NOTE Same tag applied twice to same person
+
+0 @F1@ FAM
+1 _TAG @EDGE4@
+1 NOTE Unicode tag on family record
+
+0 @S1@ SOUR
+1 TITL Test Source
+1 _TAG @EDGE3@
+
+0 @E1@ EVEN
+1 TYPE Test Event
+1 _TAG @EDGE2@
+1 NOTE Tag on standalone event
+
+0 @R1@ REPO
+1 NAME Test Repository
+1 _TAG @EDGE5@
+
+0 @N1@ NOTE Test Note
+1 _TAG @EDGE6@
+
+0 @O1@ OBJE
+1 FILE test.jpg
+1 _TAG @EDGE1@
+
+0 TRLR
