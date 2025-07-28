@@ -58,6 +58,8 @@ The _ATTR mechanism allows unlimited vendor-specific features without specificat
 - Universal parsing support
 - No conversion conflicts
 - Sufficient precision (16.7M colors)
+- Single format prevents incompatibility (no "green" vs #00FF00 conflicts)
+- Transport spec requires deterministic behavior
 
 ### Why Optional Color?
 - Not all tags need visual representation
