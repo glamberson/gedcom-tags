@@ -6,7 +6,8 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/_TAG
 
-standard tag: _TAG
+extension tags:
+- _TAG
 
 specification:
   - Tag Reference

@@ -6,7 +6,8 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/_COLOR
 
-standard tag: _COLOR
+extension tags:
+- _COLOR
 
 specification:
   - Color
